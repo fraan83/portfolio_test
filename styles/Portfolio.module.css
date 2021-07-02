@@ -1,7 +1,8 @@
 .content{
     max-width: 1366px;
+    min-width: 380px;
     height: 12vh;
-    width: 500px;
+   
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -120,7 +121,7 @@
 
 
     .listaIcone{
-     margin-top: 5vh;
+     margin-top: 7vh;
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -132,6 +133,7 @@
     }
 
     .textToshow{
+        font-size: 0.9rem;
         padding-top: 11px;
         line-height: 0.5rem;
         display: flex;

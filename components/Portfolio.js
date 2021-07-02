@@ -146,7 +146,7 @@ const Portfolio = () => {
 
                         <div className={styles.textToshow}>
 
-                            <h3>{titolo}</h3>
+                            <h4>{titolo}</h4>
                             <br />
                             {info}
                         </div>
@@ -159,20 +159,18 @@ const Portfolio = () => {
                             <button
                                 name="name"
                                 onMouseOver={(e) => mostraDettagliClick(e)}
-                          
-                                    
+                                                           
                             >
-                                <PersonIcon />
+                                <PersonIcon  />
                             </button>
 
                         </li>
                         <li>
                             <button
                                 name="email"
-                            
                                 onMouseOver={(e) => mostraDettagliClick(e)}
                             >
-                                <MailOutlineIcon />
+                                <MailOutlineIcon  />
                             </button>
 
                         </li>

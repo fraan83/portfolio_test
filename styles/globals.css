@@ -7,6 +7,7 @@ body {
   font-family: 'Raleway', sans-serif!important;
   color: grey;
   box-sizing: border-box;
+  
 }
 
 a {
@@ -30,11 +31,11 @@ a {
 
 button {
   display: block;
-  height: 100%;
-  width: 100%;
+  height: 40px;
+  width: 40px;
   text-decoration: none;
   border:none;
-  background-color: transparent;
+  background-color: #fff;
   margin-top: 4px;
 }
 
