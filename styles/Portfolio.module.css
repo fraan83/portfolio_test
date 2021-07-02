@@ -24,7 +24,7 @@
     position: relative;
     /* width: 100%; */
     height: auto;
-    top: 30px;
+    top: 40px;
     margin: 0 auto;
 }
 
@@ -72,6 +72,7 @@
 
 
   .flexContainer {
+    padding-top: 3vh;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -139,6 +140,10 @@
         justify-content: center;
         align-content: center;
         align-items: center;
+        text-align: center;
+        line-height: 0.9rem;
+        word-break: break-word;
+        max-width: 500px;
     }
 
 

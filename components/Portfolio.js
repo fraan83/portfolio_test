@@ -105,11 +105,30 @@ const Portfolio = () => {
             setInfo(`${utente.login.password}`)
         }
     }
-
+    const mostraDettagliClick = (e) => {
+        console.log('event', e.target.name)
+        setIsShown(true);
+        if (e.target.name === 'name') {
+            setTitolo('Nome e Cognome')
+            setInfo(`${utente.name.title + ' ' + utente.name.first + ' ' + utente.name.last}`)
+        } else if (e.target.name === 'email') {
+            setTitolo('Email')
+            setInfo(`${utente.email}`)
+        } else if (e.target.name === 'phone') {
+            setTitolo('Telefono')
+            setInfo(`${utente.cell}`)
+        } else if (e.target.name === 'location') {
+            setTitolo('Indirizzo')
+            setInfo(`${utente.location.street.name + '\n' + utente.location.street.number + '\n' + utente.location.city + ' ' + utente.location.state}`)
+        } else if (e.target.name === 'password') {
+            setTitolo('Password')
+            setInfo(`${utente.login.password}`)
+        }
+    }
 
 
     return (
-        <div className="container d-flex" style={{ border: '1px solid lightgrey', borderRadius: '6px' }}>
+        <div className="container d-flex centrato" style={{ border: '1px solid lightgrey', borderRadius: '6px' }}>
             <div className={styles.content}>
                 <picture className={styles.containerImg}>
                     <img className={styles.roundedImg} src={utente.picture.medium} alt={utente.name.first + ' ' + utente.name.last} title={utente.name.first + ' ' + utente.name.last} />
@@ -139,7 +158,9 @@ const Portfolio = () => {
                         <li>
                             <button
                                 name="name"
-                                onMouseEnter={(e) => mostraDettagli(e)}
+                                onMouseOver={(e) => mostraDettagliClick(e)}
+                          
+                                    
                             >
                                 <PersonIcon />
                             </button>
@@ -148,7 +169,8 @@ const Portfolio = () => {
                         <li>
                             <button
                                 name="email"
-                                onMouseEnter={(e) => mostraDettagli(e)}
+                            
+                                onMouseOver={(e) => mostraDettagliClick(e)}
                             >
                                 <MailOutlineIcon />
                             </button>
@@ -157,9 +179,10 @@ const Portfolio = () => {
                         <li>
                             <button
                                 name="phone"
-                                onMouseEnter={(e) => mostraDettagli(e)}
+                        
+                                onMouseOver={(e) => mostraDettagliClick(e)}
                             >
-                                <PhoneIcon />
+                                <PhoneIcon  />
                             </button>
 
 
@@ -167,7 +190,8 @@ const Portfolio = () => {
                         <li>
                             <button
                                 name="location"
-                                onMouseEnter={(e) => mostraDettagli(e)}
+                              
+                                onMouseOver={(e) => mostraDettagliClick(e)}
                             >
                                 <PinDropIcon />
                             </button>
@@ -175,7 +199,8 @@ const Portfolio = () => {
                         <li>
                             <button
                                 name="password"
-                                onMouseEnter={(e) => mostraDettagli(e)}
+                            
+                                onMouseOver={(e) => mostraDettagliClick(e)}
                             >
                                 <LockOpenIcon />
                             </button>
